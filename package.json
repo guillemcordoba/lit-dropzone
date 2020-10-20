@@ -21,7 +21,7 @@
     "storybook": "concurrently --kill-others --names tsc,storybook \"npm run build:watch\" \"start-storybook --node-resolve --watch --open\"",
     "storybook:build": "build-storybook",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
-    "publish-to-branch": "npm run build && gh-pages -d dist -b build"
+    "publish-to-branch": "npm run build && cp package.json dist && gh-pages -d dist -b build"
   },
   "dependencies": {
     "dropzone": "^5.7.2",
